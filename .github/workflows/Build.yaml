@@ -10,7 +10,7 @@ jobs:
     runs-on: windows-latest
 
     env:
-      GH_TOKEN: ${{ secrets.BUSCADORGITHUBELECTRON }}
+      GH_TOKEN: ${{ secrets.WERFENTOUCHCLIENTTOKEN }}
 
     steps:
       - name: Checkout repository
