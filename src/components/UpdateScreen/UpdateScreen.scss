@@ -1,0 +1,153 @@
+@import "./src/components/colorChart";
+
+.UpdateScreen {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    &__Main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__SideLogo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #06038D;
+
+        img {
+            width: 400px;
+        }
+    }
+
+    &__Dependencies {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            fill: $WerfenColor;;
+            stroke-width: 1.6px;
+            width: 80px;
+            height: 70px;
+        }
+    }
+
+    &__Message {
+        &--title {
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin-bottom: .5rem;
+            text-align: center;
+        }
+
+        .dev {
+            padding: 0 0 0 8px;
+        }
+
+        .build {
+            padding: 0 0 0 18px;
+        }
+
+        &--info {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: .5rem;
+            padding: 0 0 0 87px;
+            display: inline-block;
+            width: 100%;
+            text-align: left;
+
+            &__build {
+                padding: 0 0 0 77px;
+            }
+
+            span {
+                color: #6966ff;
+            }
+        }
+
+        margin-bottom: .5rem;
+        margin-top: 0;
+        line-height: 1.2;
+        color: $Dark2;
+        text-align: left !important;
+        width: 100%;
+    }
+
+    &__Content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 20%;
+    }
+
+    &__Progress {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0 0 0 20px;
+
+        .progress {
+            background: #F8F8F8;
+            border: 1px solid #06038D;
+            border-radius: 0;
+            height: 36px;
+            width: 100%;
+        }
+
+        .progress__content {
+            background: #F8F8F8;
+            border: 1px solid #6966ff;
+            border-radius: 0;
+            height: 36px;
+            width: 100%;
+        }
+
+        .bg-download-progress {
+            background-color: #06038D;
+        }
+
+        .bg-download-progress__content {
+            background-color: #6966ff;
+        }
+
+        &--bars {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        &--info {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: .5rem;
+            color: $Dark2;
+            display: inline-block;
+            width: 100%;
+            text-align: left;
+        }
+    }
+
+    .installing-spinner {
+        color: #6966ff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        width: 100%;
+
+        span {
+            text-align: center;
+        }
+    }
+
+}

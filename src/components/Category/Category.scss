@@ -1,0 +1,66 @@
+@import "./src/components/colorChart";
+
+.Category {
+  //height: 150px;
+  cursor: pointer;
+  font-family: Verdana, sans-serif;
+
+  &__Image {
+      background-color: $White;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding-bottom: 38.3%;
+      //height: 144px;
+
+      &--visit {
+          background-color: #f0aa75;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 144px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      color: #06038D;
+      line-height: 23px;
+      font-size: 16px;
+      text-align: left;
+      font-family: Verdana, sans-serif;
+    }
+
+  }
+
+  &__Side {
+      color: $White;
+      text-align: center;
+      padding: 8px 10px !important;
+      background-repeat: no-repeat;
+      background-position: 95% 95%;
+      background-size: 2vw;
+      font-size: 1vw;
+      line-height: 3.5vh;
+
+      .fixed-size & {
+          font-size: 15px;
+          line-height: unset;
+          background-size: unset;
+      }
+
+      .italia_vendite & {
+          height: 61px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+  }
+}
+.box-generic {
+  background: #06038D;
+  border: 3px solid #06038D;
+}
+
+.box-il {
+  background: $ILColor;
+  border: 3px solid $ILColor;
+}

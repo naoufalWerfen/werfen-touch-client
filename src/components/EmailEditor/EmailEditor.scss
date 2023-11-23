@@ -1,0 +1,566 @@
+@import "./src/components/colorChart";
+
+.EmailEditor, .EmailEditorSolo {
+    z-index: 100;
+    display: flex;
+    flex-grow: 1;
+    overflow-y: hidden;
+    div.row {
+        span {
+            text-align: center;
+            font-family: Verdana, sans-serif;
+        }
+    }
+
+    &__Title {
+        font-weight: bold;
+        font-family: Verdana, sans-serif;
+        padding-bottom: 8px;
+        padding-top: 8px;
+    }
+
+    &__Form {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        font-family: Verdana, sans-serif;
+        width: 100%;
+
+        .text-primary {
+            color: #06038D !important;
+        }
+
+        textarea.form-control {
+            width: 100%;
+            margin: 0;
+            padding: 15px 15px 21px 15px;
+            max-height: 190px;
+            line-height: 24px;
+        }
+
+        &.form-group {
+            margin-bottom: 0;
+        }
+
+        .form-control {
+            display: inline-block;
+            border: 0 none transparent;
+            margin: 0;
+            font-size: 14px;
+            line-height: 14px;
+
+            &:focus {
+                border-color: #6966ff !important;
+                box-shadow: 0 0 0 0.2rem #6966ff;
+            }
+        }
+
+        input.form-control {
+            width: 100%;
+
+            &#formBasicEmail {
+                width: 100%;
+            }
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .custom-file-upload {
+            border: 1px solid $WerfenColor;
+            display: inline-block;
+            color: $WerfenColor;
+            padding: 6px 12px;
+            cursor: pointer;
+        }
+    }
+
+    .label-red {
+        color: $AutoimmunityColor;
+    }
+
+    &__Privacy {
+        width: 1280px !important;
+        font-size: 13px !important;
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%);
+        padding-left: 0 !important;
+
+        p {
+            padding: 0 20px;
+        }
+
+        .modal-header {
+            background-color: #cccccc;
+        }
+
+        .modal-dialog {
+            margin: 0 0 0 0 !important
+        }
+
+        .modal-content {
+            width: 1280px;
+        }
+
+        td {
+            padding: 0.75rem 1rem !important;
+        }
+
+        &-wrapper {
+            padding: 10px 20px;
+        }
+
+        button.close {
+            background-color: #666666;
+            border-radius: 50%;
+            color: #FFFFFF;
+            font-size: 20px;
+            height: 35px;
+            margin-top: -1px;
+            margin-right: 15px;
+            opacity: 1;
+            position: relative;
+            width: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            span {
+                color: #FFFFFF;
+                display: inline-block;
+                height: 24px;
+            }
+        }
+
+        &-link {
+            color: #06038D ! important;
+            text-decoration: underline;
+            border: none ! important;
+            background-color: transparent ! important;
+            padding: 0 8px !important;
+
+            &:focus {
+                box-shadow: 0 0 0 transparent !important;
+            }
+        }
+
+    }
+
+    &__Recipients {
+        max-height: 86px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
+
+        &--wrapper {
+            display: flex;
+            flex-direction: column;
+            height: 33px;
+            align-items: flex-start;
+            justify-content: space-around;
+            flex-grow: 1;
+        }
+
+        &--error {
+            color: $AutoimmunityColor !important;
+            text-align: left;
+            font-size: 12px !important;
+            padding-left: 12px;
+        }
+
+        &--input {
+            border: transparent !important;
+        }
+
+        &--input:focus {
+            box-shadow: none !important;
+        }
+
+        &--items {
+            width: 50%;
+            height: 34px;
+            overflow-y: scroll;
+        }
+
+        &--item {
+            color: #06038D;
+            border-radius: 16px;
+            background-color: #ccccff;
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 6px 4px 12px;
+            line-height: 24px;
+            margin: 0 1px 1px 0;
+
+            div {
+                font-size: 12px;
+                width: calc(100% - 30px);
+            }
+
+            button {
+                color: $AutoimmunityColor;
+                width: 22px;
+                height: 22px;
+                border-radius: 50%;
+                border: none;
+                cursor: pointer;
+                font-size: 12px;
+                margin-left: 10px;
+                font-weight: bold;
+                padding: 0;
+                line-height: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $White;
+            }
+        }
+    }
+
+    &__Attachment {
+        display: flex;
+        flex-direction: column;
+        height: 362px;
+        overflow-y: auto;
+        padding: 0 8px;
+        position: relative;
+        font-family: Verdana, sans-serif;
+
+        &--title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            span {
+                font-size: 1rem;
+                color: $White;
+            }
+
+            background-color: #06038D !important;
+            position: fixed;
+            min-height: 38px;
+            width: 326px;
+        }
+
+        &--list {
+            padding: 50px 0 36px 0;
+            display: inline-block;
+        }
+
+        &--item {
+            margin: 4px;
+            display: inline-block;
+        }
+
+        &--element {
+            display: inline-flex;
+            justify-content: space-around;
+            align-items: center;
+            border: 1px solid #06038D;
+            border-radius: 27px;
+            padding: 8px;
+            min-height: 54px;
+            max-height: 60px;
+        }
+
+        &--info {
+            font-size: 12px;
+            color: #6966ff;
+            font-weight: bold;
+            margin-right: 4px;
+            width: calc(100% - 28px)
+        }
+
+        &--delete {
+            height: 20px;
+            width: 20px;
+            padding: 2px;
+            font-size: 10px;
+            color: $AutoimmunityColor;
+            background-color: $White;
+            border: 1px solid $AutoimmunityColor;
+            border-radius: 10px;
+        }
+    }
+
+    .actions {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        right: 15px;
+        bottom: 5px;
+    }
+
+    &__Buttons {
+        font-family: Verdana, sans-serif;
+
+        &--menu {
+            display: flex;
+            justify-content: flex-start;
+
+            button {
+                margin-right: 16px;
+            }
+
+            span {
+                background-color: transparent !important;
+                border: none !important;
+                padding: 0 8px !important;
+            }
+        }
+    }
+
+    &__Send,
+    &__Cancel,
+    &__List {
+        background-color: transparent !important;
+        display: inline-block !important;
+        font-family: Verdana, sans-serif;
+        font-size: 16px !important;
+        color: #fff !important;
+        text-align: center !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        padding: 6px !important;
+        width: 225px;
+        margin: 8px 8px 8px 0;
+    }
+
+    .send-generic {
+        background-color: #06038D !important;
+
+        &:focus {
+            box-shadow: 0 0 0 0.2rem #6966ff !important;
+        }
+    }
+
+    .send-disabled {
+        background-color: #ededed !important;
+        border: 1px solid #dedede;
+        border-radius: 0 !important;
+        color: #4e555b !important;
+
+        &:focus {
+            box-shadow: 0 0 0 0.2rem #6d6d6d;;
+        }
+    }
+
+    .reset {
+        margin: 8px 0;
+        background-color: $AutoimmunityColor !important;
+
+        &:focus {
+            box-shadow: 0 0 0 0.2rem #6966ff;
+        }
+    }
+
+    .email-list {
+        background-color: #6966ff !important;
+        height: 36px;
+
+        &:focus {
+            box-shadow: 0 0 0 0.2rem #A72B2A;
+        }
+
+        &_error {
+            background-color: #6966ff !important;
+            height: 36px;
+
+            &:focus {
+                box-shadow: 0 0 0 0.2rem #A72B2A;
+            }
+        }
+    }
+
+
+    .email-body {
+        display: flex;
+        flex-grow: 1;
+        overflow-y: auto;
+        position: relative;
+
+        .name,
+        .entity,
+        .to,
+        .created {
+            padding-bottom: 7px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+            margin-bottom: 7px;
+            color: dimgrey;
+            font-size: 14px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            line-height: 16px;
+            height: 32px;
+
+            span {
+                color: black;
+                margin-right: 15px;
+                font-size: 16px;
+                line-height: 16px;
+                height: 19px;
+            }
+
+            input {
+                height: 19px;
+                padding: 0 12px;
+            }
+        }
+
+        .to {
+            height: unset;
+        }
+
+        .status {
+            position: absolute;
+            bottom: 75px;
+            right: 50px;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 0 15px;
+            text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+
+            &.sent {
+                color: green;
+                font-kerning: -15px;
+                font-weight: bold;
+            }
+
+            &.draft {
+                color:  gray;
+                font-weight: bold;
+            }
+
+            &.not-sent {
+                color:  #0062cc;
+                font-weight: bold;
+            }
+
+            &.error {
+                color: indianred;
+                font-weight: bold;
+            }
+        }
+
+        .message {
+            padding-bottom: 30px;
+        }
+    }
+
+    .attachments {
+        max-height: 61px;
+        overflow-y: auto;
+        flex-shrink: 0;
+        margin: 0;
+        margin-bottom: 7px;
+    }
+
+    .details.card {
+        overflow-y: auto;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .LibraryTile {
+        margin-bottom: 10px;
+
+        &__Image {
+            width: 33px;
+            height: 33px;
+            line-height: 33px;
+            text-align: center;
+            font-size: 12px;
+            padding-bottom: 8px
+
+        }
+
+        &__Image.CS, &__Image.O, &__Image.SP {
+            background: #94a6b0;
+        }
+
+        &__Image.S, &__Image.P, &__Image.CP {
+            background: #5D5F5E;
+        }
+
+        &__Image.SA, &__Image.BR {
+            background: #2a373b;
+        }
+
+        &__Image.SS, &__Image.CALC {
+            background: #2A3738;
+        }
+
+        &__Title {
+            padding: 0 8px;
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            max-width: 186px;
+        }
+
+        &__Item {
+            padding: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.125);
+
+            &:hover {
+                margin: 0;
+                transform: unset;
+
+            }
+
+            .actionButton {
+                height: 33px;
+                width: 33px;
+                padding: 8px;
+
+                svg {
+                    height: 18px;
+                    width: 18px;
+                }
+            }
+        }
+    }
+
+}
+.EmailEditor {
+   width: 100%;
+}
+.EmailEditorSolo {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 1280px;
+    height: 720px;
+    &__Discard {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        font-size: 18px;
+        padding: 5px 12px;
+        font-weight: 400;
+        z-index: 250;
+        color: white;
+        background-color: $AutoimmunityColor;
+        cursor: pointer;
+    }
+    .discard {
+        display: inline-block !important;
+        font-size: 16px;
+        color: #fff;
+        text-align: center !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        padding: 7px 30px;
+        margin: 0;
+        background-color: $AutoimmunityColor;
+        cursor: pointer;
+    }
+}

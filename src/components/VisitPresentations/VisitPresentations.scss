@@ -1,0 +1,120 @@
+@import "./src/components/colorChart";
+
+.VisitPresentations {
+    padding-bottom: 40px;
+    height: 675px;
+
+    &__form {
+        margin: 28px auto;
+
+        .form-group {
+            display: flex;
+            align-items: flex-end;
+            width: 100%;
+            text-align: left;
+        }
+
+        .search-text {
+            color: #06038D !important;
+        }
+
+        .form-control:focus {
+            border-color: #6966ff !important;
+            box-shadow: 0 0 0 0.2rem #6966ff;
+        }
+    }
+
+    &__Buttons {
+        margin-bottom: .5rem;
+    }
+
+    &__Clear {
+        display: inline-block !important;
+        font-size: 16px !important;
+        color: #fff !important;
+        text-align: center !important;
+        border: 0 !important;
+        border-radius: 5px;
+        width: 150px !important;
+        padding: 6px !important;
+        height: 36px !important;
+        background-color: $AutoimmunityColor !important;
+    }
+
+    &__Clear:focus {
+        box-shadow: 0 0 0 0.2rem #6966ff !important;
+    }
+
+    &__Action-enabled {
+        background-color: #06038D !important;
+        border: none !important;
+        margin-right: 20px;
+        height: 36px;
+        width: 36px;
+        border-radius: 10px !important;
+    }
+
+    &__Action-enabled:focus {
+        box-shadow: 0 0 0 0.2rem #6966ff !important;
+    }
+
+    &__Action-disabled {
+        background-color: #5D5F5E !important;
+        color: #2a373b !important;
+        border: none !important;
+        margin-right: 20px;
+        height: 36px;
+        width: 36px;
+        border-radius: 10px !important;
+    }
+
+    &__Icon {
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+        height: 48px;
+        width: 48px;
+    }
+
+    svg {
+        fill: transparent;
+        stroke: $White;
+        stroke-width: 1.6px;
+        width: 14px;
+        height: 14px;
+        transition: all ease-in-out 250ms;
+    }
+
+    &__Results {
+        height: 675px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    &__NoResults {
+        margin: 20px auto 0 auto;
+        color: $AutoimmunityColor;
+        font-weight: 600;
+    }
+
+    .search-field {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 6;
+        margin-right: 7px;
+        flex-shrink: 0;
+    }
+
+    .type-select {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 3;
+        margin-right: 45px;
+    }
+
+    .action-buttons {
+        display: flex;
+        justify-content: space-between;
+        flex-shrink: 0;
+    }
+}

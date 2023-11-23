@@ -1,0 +1,105 @@
+@import "./src/components/colorChart";
+
+.ReinstallScreen {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    &__Container {
+        //position: absolute;
+        //top: 50%;
+        //transform: translateY(-50%);
+    }
+
+    &__Box {
+        //width: 1280px;
+        //height: 720px;
+        //position: absolute;
+        //top: 50%;
+        //left: 50%;
+        //transform: translate(-50%, -50%);
+    }
+
+    &__Main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__SideLogo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #06038D;
+
+        img {
+            width: 400px;
+        }
+    }
+
+    &__Dependencies {
+        width: 600px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__Message {
+        &--title {
+            font-size: 1.25rem;
+            margin-bottom: .5rem;
+            padding: 0 50px;
+            text-align: justify;
+        }
+
+        &--info {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: .5rem;
+
+            span {
+                color: $WerfenColor;
+            }
+        }
+
+        margin-bottom: .5rem;
+        margin-top: 0;
+        line-height: 1.2;
+        color: $Dark2;
+        text-align: left !important;
+        padding: 0 20px;
+    }
+
+    &__Content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__Submit {
+        background-color: transparent !important;
+        display: inline-block !important;
+        font-family: Verdana, sans-serif;
+        font-size: 16px !important;
+        color: #fff !important;
+        text-align: center !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        height: auto;
+        padding: 6px 119px !important;
+        margin: 8px 8px 32px 0;
+    }
+
+    .submit-generic {
+        background-color: #06038D !important;;
+    }
+
+    .submit-il {
+        background-color: $ILColor !important;
+    }
+
+}

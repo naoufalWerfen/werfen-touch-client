@@ -1,0 +1,458 @@
+@import "./src/components/colorChart";
+
+.EmailManager {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 40px;
+    margin-top: 40px;
+    height: calc(100% - 125px);
+
+    &__Table {
+        max-height: calc(100% - 66px);
+    }
+
+
+    &__Header {
+        padding: 8px 0;
+        margin-bottom: 16px;
+
+        &--title {
+            font-weight: bold;
+            padding-bottom: 8px;
+            padding-top: 8px;
+        }
+    }
+
+    .row.fluid {
+        width: 100%;
+    }
+
+    .filters {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        .filter {
+            display: flex;
+            justify-content: stretch;
+            text-align: left;
+            margin-right: 7px;
+
+            &.date-filter {
+                display: flex;
+                flex-grow: 1;
+                flex-shrink: 0;
+                max-width: 190px;
+            }
+
+            &.status-filter {
+                display: flex;
+                flex-grow: 1;
+                flex-shrink: 0;
+                max-width: 160px;
+            }
+
+            &.text-filter {
+                display: flex;
+                flex-grow: 3;
+                flex-shrink: 0;
+            }
+
+            label {
+                width: 100%;
+            }
+
+            & input,
+            & select {
+                width: 100%;
+            }
+        }
+
+        .button {
+            display: flex;
+            align-items: flex-start;
+            padding-bottom: 9px;
+        }
+
+        button.btn-primary {
+            padding-left: 8px;
+            padding-right: 9px;
+            margin-right: 8px;
+        }
+    }
+
+    .button-wrapper {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .list {
+        flex-grow: 0;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        width: 25%;
+        overflow-y: scroll;
+
+        .card {
+            background-color: #e4e4e4;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #efefef;
+            }
+
+            &.active {
+                background-color: white;
+            }
+        }
+
+        .entity {
+            font-size: 12px;
+            width: 80%;
+        }
+
+        .createdOn {
+            position: absolute;
+            top: 7px;
+            right: 15px;
+            font-size: 10.5px;
+        }
+
+        .status {
+            position: absolute;
+            font-weight: normal;
+            right: 15px;
+            bottom: 4px;
+            font-size: 10.5px;
+            svg.icon {
+                width: 12px;
+                height: 12px;
+            }
+        }
+    }
+
+    .manager {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        //height: calc(100vh - 220px);
+
+        .card {
+            border-radius: 0;
+            border: 0 none transparent;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+            padding: 15px;
+            text-align: left;
+
+            &.draft {
+                border-left: 4px solid lightgray;
+            }
+
+            &.draft.active {
+                border-left: 4px solid white;
+            }
+
+            &.sent {
+                border-left: 4px solid green;
+            }
+
+            &.not-sent {
+                border-left: 4px solid #0062cc;
+            }
+
+            &.error {
+                border-left: 4px solid indianred;
+            }
+
+            &.active {
+                background-color: white;
+            }
+
+            &.details {
+                width: 100%;
+            }
+        }
+    }
+
+    .email-body {
+        display: flex;
+        flex-grow: 1;
+        overflow-y: auto;
+        position: relative;
+
+        .name,
+        .entity,
+        .to,
+        .created {
+            padding-bottom: 7px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+            margin-bottom: 7px;
+            color: dimgrey;
+            font-size: 14px;
+
+            span {
+                color: black;
+                margin-right: 15px;
+                font-size: 16px;
+            }
+        }
+
+        .status {
+            position: absolute;
+            top: 50px;
+            height: 30px;
+            right: 30px;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 0 15px;
+            text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+        }
+
+        .message {
+            padding-bottom: 30px;
+        }
+
+        .back {
+            display: none;
+        }
+
+        .LibraryTile {
+            margin-bottom: 10px;
+
+            &__Image {
+                width: 33px;
+                height: 33px;
+                line-height: 33px;
+                text-align: center;
+                font-size: 12px;
+                padding-bottom: 8px
+
+            }
+
+            &__Image.CS, &__Image.O, &__Image.SP {
+                background: #94a6b0;
+            }
+
+            &__Image.S, &__Image.P, &__Image.CP, &__Image.SH {
+                background: #5D5F5E;
+            }
+
+            &__Image.SA, &__Image.BR {
+                background: #2a373b;
+            }
+
+            &__Image.SS, &__Image.CALC {
+                background: #2A3738;
+            }
+
+            &__Title {
+                padding: 0 8px;
+                font-size: 9px;
+
+            }
+
+            &__Item {
+                padding: 8px;
+                border: 1px solid rgba(0, 0, 0, 0.125);
+
+                &:hover {
+                    margin: 0;
+                    transform: unset;
+
+                }
+
+                .actionButton {
+                    height: 33px;
+                    width: 33px;
+                    padding: 8px;
+
+                    svg {
+                        height: 18px;
+                        width: 18px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .attachments {
+        max-height: 122px;
+        overflow-y: auto;
+        flex-shrink: 0;
+    }
+
+    .details.card {
+        overflow-y: auto;
+    }
+
+    .status {
+        font-weight: bold;
+        svg.icon {
+            display: inline-block;
+            width: 18px;
+            margin-left: 7px;
+            fill: transparent;
+            stroke-width: 2px;
+            vertical-align: text-top;
+        }
+
+        &.sent {
+            color: green;
+            font-kerning: -15px;
+            svg.icon{
+                stroke: green;
+            }
+        }
+
+        &.not-sent {
+            color:  #0062cc;
+            svg.icon{
+                stroke:  #0062cc;
+            }
+        }
+
+        &.draft {
+            color: gray;
+            svg.icon{
+                stroke:  gray;
+            }
+        }
+
+        &.error {
+            color: indianred;
+            svg.icon{
+                stroke: indianred;
+            }
+        }
+    }
+
+    //.LibraryTile {
+    //    margin-bottom: 10px;
+    //
+    //    &__Image {
+    //        width: 33px;
+    //        height: 33px;
+    //        line-height: 33px;
+    //        text-align: center;
+    //        font-size: 12px;
+    //        padding-bottom: 8px
+    //    }
+    //
+    //    &__Title {
+    //        padding: 0 8px;
+    //        font-size: 9px;
+    //
+    //    }
+    //
+    //    &__Item {
+    //        padding: 8px;
+    //        border: 1px solid rgba(0, 0, 0, 0.125);
+    //
+    //        &:hover {
+    //            margin: 0;
+    //            transform: unset;
+    //
+    //        }
+    //
+    //        .actionButton {
+    //            height: 33px;
+    //            width: 33px;
+    //            padding: 8px;
+    //
+    //            svg {
+    //                height: 18px;
+    //                width: 18px;
+    //            }
+    //        }
+    //    }
+    //}
+
+    .create,
+    .email-disabled,
+    .discard {
+        display: inline-block !important;
+        font-size: 16px;
+        color: #fff;
+        text-align: center !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        padding: 7px 30px;
+        margin: 0;
+        cursor: pointer;
+    }
+
+    .support--wrapper {
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        right: 66px;
+        bottom: 80px;
+        padding: 20px 20px 0 0;
+        height: 24px;
+        width: 24px;
+        z-index: 100;
+        z-index: 1;
+    }
+
+    .support {
+        padding: 0;
+        height: 24px;
+        width: 24px;
+        border: none;
+        background-color: transparent;
+        position: absolute;
+
+
+        svg.icon {
+            transform: scale(2.5);
+        }
+    }
+
+    .create {
+        background-color: #06038D !important;
+    }
+
+    .email-disabled {
+        background-color: gray !important;
+        cursor: default;
+    }
+
+    .discard {
+        background-color: $AutoimmunityColor !important;
+    }
+
+    .reset {
+        border: none;
+        color: white;
+        padding: 7px 12px;
+        background-color: $AutoimmunityColor !important;
+        font-family: Verdana, sans-serif;
+        font-size: 16px !important;
+
+        &:focus {
+            box-shadow: 0 0 0 0.2rem #6966ff;
+        }
+    }
+}
+
+.EmailReader {
+    &__Edit {
+        &.edit-generic {
+            background-color: #06038D;
+            border: 0 none transparent;
+            border-radius: 0;
+            padding: 7px 30px;
+
+            &:not(.disabled):not(:disabled):hover,
+            &:not(.disabled):not(:disabled):active,
+            &:not(.disabled):not(:disabled):focus,
+            &:not(.disabled):not(:disabled):focus:active,
+            {
+                background-color: #06038D;
+                box-shadow: unset;
+            }
+        }
+    }
+}

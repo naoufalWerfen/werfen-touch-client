@@ -1,0 +1,151 @@
+@import "./src/components/colorChart";
+
+.Navigation {
+  height: 48px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  font-family: Verdana, sans-serif;
+
+  &__Item {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 115px;
+  }
+  &__Icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    width: 48px;
+  }
+  &__Item:hover &__Icon ,
+  .active &__Icon {
+    height: unset;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__Title {
+    font-size: 10px;
+    font-family: Verdana, sans-serif;
+    color: $White;
+    display: none;
+  }
+  &__Item:hover &__Title,
+  .active &__Title {
+    display: block;
+  }
+
+  svg {
+    fill: transparent;
+    stroke: $White;
+    stroke-width: 1.6px;
+    width: 20px;
+    height: 20px;
+    transition: all ease-in-out 250ms;
+  }
+  &__Item:hover svg,
+  .active svg
+  {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.menu-generic {
+  background: #06038D;
+  .Navigation__Item:hover {
+    background: #06038D;
+  }
+}
+
+.menu-il {
+  background: $ILColor;
+
+  .Navigation__Item:hover {
+    background: $ILColorContrast;
+  }
+}
+
+.VisitNavigation {
+  width: 80px;
+  height: 300px;
+  position: absolute;
+  right: 8px;
+  bottom: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: Verdana, sans-serif;
+  background: $Black;
+  z-index: 1;
+  border-radius: 10px 10px 0 10px;
+  padding: 10px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 15px 20px 0;
+    border-color: transparent $Black transparent transparent;
+  }
+
+  &__Item {
+    padding: 20px;
+
+    &:active,
+    &:visited,
+    {
+      padding: 20px;
+      background-color: #dee2e669;
+    }
+  }
+
+
+  svg {
+    fill: transparent;
+    stroke: $White;
+    stroke-width: 1.6px;
+    width: 24px;
+    height: 24px;
+    transition: all ease-in-out 250ms;
+  }
+
+  &__Separation {
+    width: 80%;
+    display: block;
+    border-bottom: 2px solid #FFF;
+    margin: 5px auto;
+  }
+}
+
+.menuSwitcher {
+  transition: all ease-in-out 250ms;
+  position: absolute;
+  z-index: 1;
+  right: 0px;
+  bottom: 0;
+  background: #6966ff;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  border-radius: 100% 0 0 0;
+  padding-right: 8px;
+  padding-top: 16px;
+
+  &.menu-open {
+    background-color: $White;
+  }
+}

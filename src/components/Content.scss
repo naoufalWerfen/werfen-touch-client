@@ -1,0 +1,110 @@
+@import "./src/components/colorChart";
+
+.Content {
+    font-family: Verdana, sans-serif;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+
+    & .component {
+        height: calc(100% - 48px);
+    }
+
+    & .viewer + .Navigation {
+        display: none;
+    }
+
+    &__Modal {
+        font-family: Verdana, sans-serif !important;
+
+        .modal-header {
+            background-color: #6966ff !important;
+            color: #FFF;
+        }
+
+        .close {
+            span {
+                color: #FFFFFF;
+                font-family: Verdana, sans-serif;
+            }
+        }
+
+        .btn-secondary {
+            background-color: #A72B2A;
+            border-color: #A72B2A;
+        }
+
+        .btn-primary {
+            background-color: #6966ff !important;
+            border-color: #6966ff;
+        }
+    }
+}
+
+.notification {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background: $White;
+    box-shadow: 2px 4px 10px -4px black;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    width: 100%;
+    height: 100%;
+}
+
+.downloading {
+    flex-direction: column;
+    padding: 18px 30px;
+    color: #06038D;
+
+    .progress {
+        margin-top: 18px;
+        background: #F8F8F8;
+        border: 1px solid #06038D;
+        border-radius: 0;
+        height: 18px;
+        width: 100%;
+    }
+
+    .progress__content {
+        margin-top: 18px;
+        background: #F8F8F8;
+        color: #6966ff;
+        border: 1px solid #6966ff;
+        border-radius: 0;
+        height: 18px;
+        width: 100%;
+    }
+
+    .bg-download-progress {
+        background-color: #06038D;
+    }
+
+}
+
+//noinspection CssUnusedSymbol
+.users_profiles {
+    position: absolute;
+    bottom: 35px;
+    left: 20px;
+    padding: 0 0;
+    z-index: 10;
+    font-weight: 600;
+    color: #06038D;
+    text-align: left;
+}
+
+.users_profiles.hidden {
+    display: none;
+}
+
+.installing {
+    color: #6966ff;
+}

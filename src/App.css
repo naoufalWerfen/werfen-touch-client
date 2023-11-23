@@ -1,0 +1,74 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    background: #565656 !important;
+    position: relative;
+    overflow: hidden;
+}
+
+#root {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.App {
+    text-align: center;
+    min-width: 1280px;
+    min-height: 720px;
+}
+
+.App.fixed-size {
+    width: 1280px;
+    height: 720px;
+    position: relative;
+}
+
+.App .InitialComponent {
+    /*width: 1280px;*/
+    /*height: 720px;*/
+    background: white;
+    /*position: relative;*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+iframe {
+    border: 0 none transparent;
+}
+
+.tempButtonMenu {
+    background: black;
+    color: white;
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 40px;
+}
+
+.tempButtonMenu span {
+    background: black;
+    color: white;
+    display: inline-block;
+    font-size: 36px;
+    padding: 10px 15px;
+    border-radius: 50%;
+}
+
+.tempButtonMenu span.selected {
+    background: white;
+    color: black
+}
+
+body > iframe:not([width]) {
+    display: none
+}

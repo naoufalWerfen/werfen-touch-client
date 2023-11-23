@@ -1,0 +1,116 @@
+@import "./src/components/colorChart";
+
+.VisualsTile {
+  margin-bottom: 24px;
+  cursor: pointer;
+  display: block;
+  position: relative;
+
+  &__Wrapper {
+      width: 100%;
+      cursor: pointer;
+      display: block;
+      transition: all ease-in-out 150ms;
+      background-color: transparent;
+      box-shadow: 0 2px 8px -3px rgba(6, 3, 141, 1);
+      position: relative;
+
+      &--installing, &--pending {
+          cursor: progress !important;
+          background-color: #6966ff !important;
+          width: 285px;
+          height: 155px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+      position: absolute;
+      z-index: 100;
+      opacity: 0.8;
+
+      svg {
+        stroke: $White;
+        fill: none;
+        width: 24px;
+        height: 24px;
+        stroke-width: 1.6px;
+      }
+    }
+
+    & .updated {
+        z-index: 100;
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: -1px;
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        svg .triangle {
+            fill: #06038D;
+            width: 24px;
+            height: 24px;
+        }
+
+        svg .circle {
+            fill: white;
+        }
+
+    }
+
+    &:hover {
+      text-decoration: none;
+      transform: translateY(-4px);
+      box-shadow: 0 4px 16px -6px rgba(6, 3, 141, 1);
+
+        .updated {
+        }
+    }
+
+    &:focus,
+    &:focus:active {
+      transform: translateY(3px);
+      outline: 0 none transparent;
+
+        .updated {
+        }
+    }
+  }
+  &__Title {
+    padding: 6px;
+    color: $White;
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+
+    &--installing, &--pending {
+      color: $White;
+    }
+  }
+
+  .title-generic {
+    background-color: #06038D;
+    font-family: Verdana, sans-serif;
+
+    div.marked {
+      p {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+
+  .title-il {
+    background-color: $ILColor;
+    font-family: Verdana, sans-serif;
+  }
+
+  &__Image img {
+    width: 100%;
+  }
+}

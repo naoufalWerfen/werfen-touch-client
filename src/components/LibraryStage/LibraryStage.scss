@@ -1,0 +1,13 @@
+.LibraryStage {
+  &__left {
+      padding-top: 40px;
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 2px 0 5px -2px rgba(0, 0, 0, 0.1);
+      height: calc(100vh - 48px);
+      border-right: rgba(0, 0, 0, 0.05);
+  }
+
+  &__right {
+      height: calc(100vh - 48px);
+  }
+}

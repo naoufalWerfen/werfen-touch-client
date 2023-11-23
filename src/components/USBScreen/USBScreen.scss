@@ -1,0 +1,201 @@
+@import "./src/components/colorChart";
+
+.USBScreen {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    &__Container {
+        //position: absolute;
+        //top: 50%;
+        //transform: translateY(-50%);
+    }
+
+    &__Box {
+        //width: 1280px;
+        //height: 720px;
+        //position: absolute;
+        //top: 50%;
+        //left: 50%;
+        //transform: translate(-50%, -50%);
+    }
+
+    &__Main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__SideLogo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #06038D;
+
+        img {
+            width: 400px;
+        }
+    }
+
+    &--TitleWrapper {
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__Title {
+        font-size: 1.75rem;
+        margin-bottom: .5rem;
+        font-weight: 500;
+        line-height: 1.2;
+        margin-top: 0;
+    }
+
+    &__Buttons {
+        &--submit {
+            display: flex;
+            justify-content: flex-start;
+            margin-left: -15px;
+
+            button:focus {
+                border-color: #A72B2A !important;
+                box-shadow: 0 0 0 0.2rem #A72B2A;
+            }
+        }
+
+        &--login {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__Option {
+        background-color: transparent !important;
+        display: inline-block !important;
+        font-size: 16px !important;
+        color: #fff !important;
+        text-align: center !important;
+        border: 0 !important;
+        height: auto;
+        padding: 6px 97px !important;
+    }
+
+    .option-generic {
+        background-color: #06038D !important;
+        border-radius: 0 !important;
+    }
+
+    .option-disabled {
+        background-color: #ededed !important;
+        border: 1px solid #dedede;
+        border-radius: 0 !important;
+        color: #4e555b !important;
+    }
+
+    .login {
+        background-color: #6966ff !important;
+    }
+
+    &__Form {
+        margin-top: 16px;
+
+        &--row {
+            margin-bottom: 16px;
+        }
+
+        &--box {
+            position: relative;
+            padding: 4px;
+
+            span {
+                background-color: #ccccff;
+                text-align: center;
+                display: inline-block;
+                height: 35px;
+                width: 250px;
+                color: #06038D !important;
+                margin-left: -33px;
+            }
+        }
+
+        &--box:first-of-type {
+            cursor: pointer;
+        }
+
+        label {
+            margin-bottom: 0 !important;
+            padding: 6px;
+        }
+
+        .select-files {
+            position: absolute;
+            left: 0;
+            top: 0;
+            border: 1px solid #06038D !important;
+            background-color: #06038D !important;
+            color: #F1EEEF;
+            height: 35px;
+            width: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer !important;
+        }
+
+        input.form-control-file {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            opacity: 0;
+            cursor: pointer;
+        }
+    }
+
+    &__Icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 48px;
+        width: 48px;
+    }
+
+    svg {
+        fill: transparent;
+        stroke: $White;
+        stroke-width: 1.6px;
+        width: 20px;
+        height: 20px;
+        transition: all ease-in-out 250ms;
+        margin-left: 8px;
+    }
+
+    &__Button-back {
+        background-color: transparent !important;
+        display: inline-block !important;
+        font-family: Verdana, sans-serif;
+        font-size: 12px !important;
+        text-align: center !important;
+        border: 0 !important;
+        height: auto;
+        padding: 2px 0 !important;
+        margin: 8px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        cursor: pointer;
+
+        svg {
+            stroke: #4e555b !important;
+            fill: none;
+            width: 24px;
+            height: 24px;
+            stroke-width: 1.6px;
+            margin-right: 8px;
+        }
+    }
+
+}

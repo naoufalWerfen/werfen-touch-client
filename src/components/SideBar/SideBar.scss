@@ -1,0 +1,101 @@
+@import "./src/components/colorChart";
+
+.SideBar {
+  position: relative;
+  top: 40px;
+  max-height: 568px;
+  overflow-y: auto;
+  padding-left: 9px;
+
+  &__Accordion {
+
+  }
+
+  &__Card {
+    border: 0 none transparent !important;
+    border-bottom: 1px solid #6d6d6d !important;
+    background-color: transparent !important;
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+  }
+
+  &__Header {
+    border: 0 none transparent !important;
+    background-color: transparent !important;
+    padding: .75rem 0 !important;
+    position: relative;
+
+    & > div {
+      display: flex;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+    }
+
+    &-Title {
+      font-weight: bold;
+      font-family: Verdana, sans-serif;
+      color: grey;
+      text-align: left;
+      cursor: pointer;
+      padding-left: 38px;
+      max-width: 240px;
+      text-overflow: clip;
+      white-space: normal;
+      height: fit-content;
+    }
+  }
+
+  &__Header:first-of-type {
+    border-top: none;
+  }
+
+  &__Body {
+    font-size: 14px !important;
+    text-align: left;
+    padding: 0 0 0 2.4rem !important;
+
+    ul {
+      padding-inline-start: 0 !important;
+      list-style-type: none !important;
+
+      a {
+        color: grey;
+        font-family: Verdana, sans-serif;
+      }
+
+      a:hover {
+        text-decoration: none !important;
+        cursor: pointer;
+      }
+
+      .active > * {
+        color: #06038D;
+        font-weight: 700;
+      }
+
+      li {
+        padding: 0.75rem 0 !important;
+      }
+    }
+  }
+
+  .headerOpen {
+    background-image: url("../../assets/icons/chevron-up.svg");
+  }
+
+  .headerClose {
+    background-image: url("../../assets/icons/chevron-down.svg");
+  }
+
+  .headerClose, .headerOpen {
+    display: flex;
+    align-items: center;
+    align-content: space-evenly;
+    background-repeat: no-repeat;
+    background-position: 99% center;
+  }
+}

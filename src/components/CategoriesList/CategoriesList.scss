@@ -1,0 +1,15 @@
+.CategoriesList {
+    flex-grow: 1;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 30px;
+
+    .category {
+        margin-bottom: 40px;
+    }
+}
+
+.vertical-scroll {
+    max-height: 500px;
+}

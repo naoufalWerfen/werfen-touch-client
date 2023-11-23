@@ -1,0 +1,14 @@
+@import "./src/components/colorChart";
+
+.Loader {
+  &.spinner-border{
+    border: .25em solid  #06038D;;
+    border-right-color: transparent;
+    margin: 32px;
+  }
+  &.spinner-border-il {
+    border: .25em solid $ILColor;
+    border-right-color: transparent;
+    margin: 32px;
+  }
+}

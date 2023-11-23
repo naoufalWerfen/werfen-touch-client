@@ -1,0 +1,8 @@
+<svg class="feather feather-mail" width="24" height="24" fill="none" stroke="#ffffff" stroke-linecap="round"
+     stroke-linejoin="round" stroke-width="2" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(0,2)">
+        <path d="m4 4h16c1.1 0 2 0.9 2 2v12c0 1.1-0.9 2-2 2h-16c-1.1 0-2-0.9-2-2v-12c0-1.1 0.9-2 2-2z"/>
+        <polyline points="22 6 12 13 2 6"/>
+    </g>
+    <polyline transform="matrix(0 -.464 -.663 0 20 11.3)" points="16 17 21 12 16 7" stroke-width="3.61"/>
+</svg>

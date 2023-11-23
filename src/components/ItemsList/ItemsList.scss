@@ -1,0 +1,41 @@
+@import "./src/components/colorChart";
+
+.ItemsList {
+  &__Header {
+    text-align: left;
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid #959595;
+    &-Title {
+      padding-bottom: 8px;
+      padding-top: 8px;
+    }
+
+    span {
+      font-weight: bold;
+      padding-bottom: 8px;
+      padding-top: 8px;
+      border-bottom: 3px solid transparent
+    }
+    span.ItemTitle-generic {
+      border-bottom-color: #6966ff;
+      font-family: Verdana, sans-serif;
+    }
+    span.ItemTitle-il {
+      border-bottom-color: $ILColor;
+      font-family: Verdana, sans-serif;
+    }
+  }
+
+  &__Body {
+    padding-top: 24px;
+  }
+
+}
+
+.ItemsList.last {
+  height: 100%;
+}

@@ -1,0 +1,246 @@
+@import "./src/components/colorChart";
+
+.SearchTile {
+  margin-bottom: 24px;
+  cursor: pointer;
+  font-family: Verdana, sans-serif;
+
+  &__Wrapper {
+    position: relative;
+  }
+
+  &__Item {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      transition: all ease-in-out 150ms;
+      background: rgba(255, 255, 255, 0.5);
+      padding: 4px;
+      margin: -4px;
+      box-shadow: 0 3px 10px -4px rgba(0, 0, 0, 0.5);
+      position: relative;
+
+
+      &--installing, &--pending {
+          cursor: progress !important;
+          background-color: #6966ff !important;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 371px;
+          height: 56px;
+      position: absolute;
+      z-index: 100;
+      opacity: 0.8;
+      margin-left: -4px;
+
+      svg {
+        stroke: $White !important;
+        fill: none;
+        width: 24px;
+        height: 24px;
+        stroke-width: 1.6px;
+        margin-right: 8px;
+      }
+    }
+
+    .updated {
+        z-index: 100;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 24px;
+        height: 24px;
+
+        svg {
+            wwidth: 24px;
+            height: 24px;
+        }
+
+        svg .triangle {
+            fill: #06038D;
+            width: 24px;
+            height: 24px;
+        }
+
+        svg .circle {
+            fill: white;
+        }
+    }
+
+    .actionButton {
+      height: 48px;
+      width: 48px;
+      padding: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      svg {
+        width: 24px;
+        height: 24px;
+        fill: transparent;
+        stroke: $Black;
+        stroke-width: 1.5;
+      }
+
+      &.selected svg {
+        stroke: #06038D;
+        stroke-width: 2;
+      }
+
+      &.disabled svg {
+        stroke: white;
+        fill: #5D5F5E;
+        opacity: 0.3;
+      }
+
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.3);
+      padding: 8px;
+      margin: -8px;
+      transform: translateY(-4px);
+      box-shadow: 0 4px 15px -6px rgba(0, 0, 0, 0.5);
+
+        .updated {
+        }
+    }
+
+    &:focus,
+    &:focus:active {
+      transform: translateY(3px);
+      outline: 0 none transparent;
+
+        .updated {
+        }
+    }
+  }
+
+  &__Meta {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
+
+    &--installing, &--pending {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+  }
+
+  &__Image {
+    width: 44px;
+    height: 44px;
+    color: white;
+    line-height: 44px;
+    flex-shrink: 0;
+
+    &.cs {
+      background: #94a6b0;
+    }
+
+    &.o {
+      background: #94a6b0;
+    }
+
+    &.sp {
+      background: #94a6b0;
+    }
+
+    &.s {
+      background: #5D5F5E;
+    }
+
+    &.sh {
+      background: #5D5F5E;
+    }
+
+    &.p {
+      background: #5D5F5E;
+    }
+
+    &.br {
+      background: #2a373b;
+    }
+
+    &.sa {
+      background: #2a373b;
+    }
+
+    &.cp {
+      background: #5D5F5E;
+    }
+
+    &.ss {
+      background: #2A3738;
+    }
+
+    &.mp {
+      background: #6966ff;
+    }
+
+    &.pr {
+      background: #6966ff;
+    }
+
+    &.vd {
+      background-color: #06038D;
+    }
+
+    &.sbr {
+      background-color: #06038D;
+    }
+
+    &.d {
+      background-color: #06038D;
+    }
+
+    &.calc {
+      background-color: #06038D;
+    }
+  }
+
+  &__Title {
+    padding: 0 12px;
+    font-size: 14px;
+    text-align: left;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    &--installing, &--pending {
+      color: $White;
+    }
+
+    div.marked {
+      p {
+          margin-bottom: 0 !important;
+          text-overflow: ellipsis;
+          max-width: 250px;
+          overflow: hidden;
+          white-space: nowrap;
+
+          &:hover, &:focus {
+              text-overflow: clip;
+              white-space: normal;
+              word-break: break-all;
+              height: fit-content;
+          }
+      }
+    }
+
+  }
+
+  &__ActionHolder {
+    display: flex;
+  }
+
+}

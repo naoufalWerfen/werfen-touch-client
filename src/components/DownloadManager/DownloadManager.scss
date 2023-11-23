@@ -1,0 +1,240 @@
+@import "./src/components/colorChart";
+
+.DownloadManager {
+  padding: 40px 25px;
+  font-family: Verdana, sans-serif;
+
+  &__Header {
+    padding: 12px 8px !important;
+
+    &--title {
+      font-weight: bold;
+      padding-bottom: 8px;
+      padding-top: 8px;
+    }
+  }
+
+  svg {
+    fill: transparent;
+    stroke: white;
+    height: 60px;
+    width: 60px;
+    padding: 10px;
+    background: transparent;
+    margin: 20px 10px;
+  }
+
+  svg.visuals {
+    background: #6966ff;
+  }
+
+  svg.library {
+    background: #5D5F5E;
+  }
+
+  svg.image {
+    background: black;
+  }
+
+  svg.installing {
+    stroke: $WerfenColor;
+  }
+
+  span.installing {
+    color: $WerfenColor;
+  }
+
+  &__Menu {
+
+    .noPendingUpdates {
+      line-height: 40px;
+      margin: 18px 0;
+      display: inline-block;
+    }
+
+    .toggleSelectAll {
+      display: inline;
+      padding-right:20px;
+      input[type=checkbox]{
+        padding: 20px;
+        height: 20px;
+        width: 20px;
+        display: inline-block;
+        margin: 20px;
+      }
+    }
+  }
+
+  &__Table {
+
+    &--list {
+      max-height: 460px;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      min-height: 460px;
+      &.loader-inside{
+        display: flex;
+        overflow-y: hidden;
+      }
+      .Loader__Wrapper {
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    &--card {
+      background: white;
+      display: flex;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+
+      .status svg {
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        margin: 0 0 0 8px;
+        background: transparent;
+      }
+
+      &.Installed {
+        border-left: 4px solid green;
+
+        .status {
+          color: green;
+
+          svg {
+            stroke: green;
+          }
+        }
+      }
+
+      &.Updated {
+        border-left: 4px solid orange;
+
+        .status {
+          color: orange;
+
+          svg {
+            stroke: orange;
+          }
+        }
+      }
+
+      &.Installing {
+        border-left: 4px solid $WerfenColor;
+
+        .status {
+          color: $WerfenColor;
+
+          svg {
+            stroke: $WerfenColor;
+          }
+        }
+      }
+
+      &.Error {
+        border-left: 4px solid indianred;
+
+        .status {
+          color: indianred;
+
+          svg {
+            stroke: indianred;
+          }
+        }
+      }
+
+      &.Pending {
+        border-left: 4px solid #0062cc;
+
+        .status {
+          color: #0062cc;
+
+          svg {
+            stroke: #0062cc;
+          }
+        }
+      }
+
+      &.Postponed {
+        border-left: 4px solid #6d6d6d;
+
+        .status {
+          color: #6d6d6d;
+
+          svg {
+            stroke: #6d6d6d;
+          }
+        }
+      }
+
+      .checkbox {
+        display: flex;
+        flex-grow: 0;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        width: 56px;
+
+        & input[type=checkbox] {
+          width: 20px;
+          height: 20px;
+          display: block;
+        }
+      }
+    }
+
+    &--typeIcon {
+      display: flex;
+      flex-grow: 0;
+      margin: 10px 0;
+    }
+
+    &--properties{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-evenly;
+      flex-grow: 1;
+      margin: 20px;
+      text-align: left;
+    }
+
+    &--name{
+      font-size: 20px;
+
+      .marked {
+        p {
+          margin-bottom: 0 !important;
+        }
+      }
+    }
+
+    &--groupAndCategory{
+      font-size: 14px;
+      color: darkgray;
+    }
+
+    &--statusData {
+      align-items: flex-end;
+      display: flex;
+      font-size: 12px;
+      flex-direction: column;
+      flex-grow: 1;
+      flex-shrink: 0;
+      margin: 20px 20px 16px 20px;
+      justify-content: space-between;
+    }
+  }
+
+  &__Button {
+    border: 0 !important;
+    border-radius: 0 !important;
+    margin: 20px 0;
+  }
+
+  button.button-generic {
+    background-color: #06038D !important;
+  }
+}

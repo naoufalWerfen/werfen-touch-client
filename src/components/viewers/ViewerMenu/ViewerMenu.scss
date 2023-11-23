@@ -1,0 +1,71 @@
+@import "./src/components/colorChart";
+
+.menuTrigger {
+    transition: all ease-in-out 250ms;
+    position: absolute;
+    z-index: 12;
+    right: 0;
+    background: #6966ff;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    border-radius: 0 0 0 100%;
+    padding-right: 8px;
+    padding-top: 8px;
+
+  &.open {
+    background-color: $White;
+  }
+}
+
+.ViewerMenu {
+    background: $Black;
+    position: absolute;
+    top: 50px;
+    right: 15px;
+    z-index: 12;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px 0 10px 10px;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: -15px;
+        right: 0;
+    width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 15px 20px;
+        border-color: transparent transparent $Black transparent;
+    }
+
+    &__Item {
+        padding: 20px;
+    }
+
+    &__Item-origin {
+        padding: 20px;
+        background-color: #dee2e669;
+    }
+
+    &__Mail-checked {
+        filter: invert(1);
+        background-color: black;
+    }
+
+    &__Mail-attached {
+        color: white;
+        font-size: 8px;
+    }
+
+    &__Separation {
+        width: 80%;
+        display: block;
+        border-bottom: 2px solid #FFF;
+        margin: 5px auto;
+    }
+}
