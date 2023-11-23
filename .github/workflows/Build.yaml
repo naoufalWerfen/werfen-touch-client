@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build
+      - name: Build electron-builder
         run: npm run electron-builder -w
 
       - name: Copy to Docs
