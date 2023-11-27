@@ -1,7 +1,7 @@
 {
     "name": "werfen-touch-client-prod",
     "description": "WERFEN TOUCH with Electron + Create React App + Electron Builder",
-    "version": "10.7.93-beta",
+    "version": "10.7.97-beta",
     "author": "Werfen",
     "private": true,
     "scripts": {
