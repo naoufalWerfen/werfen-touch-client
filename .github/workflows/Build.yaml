@@ -24,15 +24,6 @@ jobs:
       - name: Install dependencies npm
         run: npm install
 
-      - name: update react-scripts
-        run: npm update react-scripts
-
-      - name: Install craco
-        run: npm install @craco/craco@0.0.3
-
-      - name: craco build
-        run: npm run build
-
       - name: Build electron-builder
         run: npm run electron-builder -w
 
