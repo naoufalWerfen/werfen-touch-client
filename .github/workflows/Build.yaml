@@ -24,6 +24,9 @@ jobs:
       - name: Install dependencies npm
         run: npm install
 
+      - name: update react-scripts
+        run: npm update react-scripts
+
       - name: Install craco
         run: npm install @craco/craco --force
 
