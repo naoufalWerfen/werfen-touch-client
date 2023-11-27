@@ -28,7 +28,7 @@ jobs:
         run: npm update react-scripts
 
       - name: Install craco
-        run: npm install @craco/craco --force
+        run: npm install @craco/craco@0.0.3
 
       - name: craco build
         run: npm run build
