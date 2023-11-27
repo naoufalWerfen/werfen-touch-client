@@ -24,9 +24,6 @@ jobs:
       - name: Install dependencies npm
         run: npm install
 
-      - name: Install dependencies yarn
-        run: yarn install
-
       - name: Install craco
         run: npm install @craco/craco --force
 
