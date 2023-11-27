@@ -21,8 +21,14 @@ jobs:
         with:
           node-version: 16.14.0
 
-      - name: Install dependencies
+      - name: Install dependencies npm
         run: npm install
+
+      - name: Install dependencies yarn
+        run: yarn install
+
+      - name: Install craco
+        run: npm install @craco/craco --force
 
       - name: Build electron-builder
         run: npm run electron-builder -w
